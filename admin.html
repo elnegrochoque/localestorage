@@ -50,12 +50,88 @@
             </div>
             <div class="col-md-2">
                 <img src="img/batmanAdmin.jpg" class='w-100' alt="batman">
-                
             </div>
-
             <hr>
         </section>
+        <section class="row my-4">
+            <div class="col-10">
+                <h3 class="text-center">Tabla de productos</h3>
+            </div>
+            <div class="col-2 d-flex justify-content-end">
+                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalProductos">Agregar</button>
+            </div>
+            <div class="table-responsive">
+                <table class="table" id="tablaProductos">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">N° serie</th>
+                            <th scope="col">Categoria</th>
+                            <th scope="col">Descripcion</th>
+                            <th scope="col">Imagen</th>
+                            <th scope="col">Opciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbodyProductos">
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                            <td>@mdo</td>
+                            <td>@mdo</td>
+                            <td>
+                                <button class="btn btn-warning">Editar</button>
+                                <button class="btn btn-danger ">Borrar</button>
+                            </td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
     </main>
+    <div class="modal fade" id="modalProductos" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Agregar Funkopop</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb">
+                            <label class="form-label">Codigo</label>
+                            <input type="text" placeholder="Ingrese nombre del producto" id="codigoProducto" class="form-control">
+                        </div>
+                        <div class="mb">
+                            <label class="form-label">Nombre</label>
+                            <input type="text" placeholder="Ingrese nombre del producto" id="nombreProducto" class="form-control">
+                        </div>
+                        <div class="mb">
+                            <label class="form-label">N° Serie</label>
+                            <input type="text" placeholder="Ingrese nombre del producto" id="ndeSerieProducto" class="form-control">
+                        </div>
+                        <div class="mb">
+                            <label class="form-label">Categoria</label>
+                            <input type="text" placeholder="Ingrese nombre del producto" id="categoriaProducto" class="form-control">
+                        </div>
+                        <div class="mb">
+                            <label class="form-label">Descripcion</label>
+                            <input type="text" placeholder="Ingrese nombre del producto" id="descripcionProducto" class="form-control">
+                        </div>
+                        <div class="mb">
+                            <label class="form-label">Imagen</label>
+                            <input type="text" placeholder="Ingrese nombre del producto" id="imgProducto" class="form-control">
+                        </div>
+
+                        <button type="submit" class="my-3 btn btn-secondary" data-bs-dismiss="modal">Guardar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
     <footer></footer>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"
         integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi"
