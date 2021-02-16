@@ -101,29 +101,40 @@
                 </div>
                 <div class="modal-body">
                     <form>
-                        <div class="mb">
+                        <div class="mb-3">
                             <label class="form-label">Codigo</label>
-                            <input type="text" placeholder="Ingrese nombre del producto" id="codigoProducto" class="form-control">
+                            <input type="number" class="form-control" placeholder="Ingrese codigo del producto"
+                                id="codigoProducto" onblur="validarNumeros(this)">
+                            <div class="valid-feedback">
+                            </div>
+                            <div class="invalid-feedback">
+                                Ingrese solo numeros
+                            </div>
                         </div>
                         <div class="mb">
                             <label class="form-label">Nombre</label>
-                            <input type="text" placeholder="Ingrese nombre del producto" id="nombreProducto" class="form-control">
+                            <input type="text" placeholder="Ingrese nombre del producto" id="nombreProducto"
+                                class="form-control" onblur="validarNombre(this)">
                         </div>
                         <div class="mb">
                             <label class="form-label">N° Serie</label>
-                            <input type="text" placeholder="Ingrese nombre del producto" id="ndeSerieProducto" class="form-control">
+                            <input type="number" placeholder="Ingrese el numero de serie" id="ndeSerieProducto"
+                                class="form-control" onblur="validarNumeros(this)">
                         </div>
                         <div class="mb">
                             <label class="form-label">Categoria</label>
-                            <input type="text" placeholder="Ingrese nombre del producto" id="categoriaProducto" class="form-control">
+                            <input type="text" placeholder="Ingrese categoria del producto" id="categoriaProducto"
+                                class="form-control" onblur="validarNombre(this)">
                         </div>
                         <div class="mb">
                             <label class="form-label">Descripcion</label>
-                            <input type="text" placeholder="Ingrese nombre del producto" id="descripcionProducto" class="form-control">
+                            <textarea type="text" placeholder="Ingrese nombre del producto" id="descripcionProducto"
+                                class="form-control" onblur="validarNombre(this)"></textarea>
                         </div>
                         <div class="mb">
                             <label class="form-label">Imagen</label>
-                            <input type="text" placeholder="Ingrese nombre del producto" id="imgProducto" class="form-control">
+                            <input type="text" placeholder="Ingrese imagen del producto" id="imgProducto"
+                                class="form-control" onblur="validarNombre(this)">
                         </div>
 
                         <button type="submit" class="my-3 btn btn-secondary" data-bs-dismiss="modal">Guardar</button>
